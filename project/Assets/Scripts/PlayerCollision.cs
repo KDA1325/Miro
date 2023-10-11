@@ -9,7 +9,7 @@ public class PlayerCollision : MonoBehaviour
     /// </summary>
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log($"{collision.gameObject.name} 오브젝트와 충돌 시작");
+        //Debug.Log($"{collision.gameObject.name} 오브젝트와 충돌 시작");
     }
 
     /// <summary>
@@ -17,7 +17,7 @@ public class PlayerCollision : MonoBehaviour
     /// </summary>
     private void OnCollisionStay(Collision collision)
     {
-        Debug.Log($"{collision.gameObject.name} 오브젝트와 충돌 중...");
+        //Debug.Log($"{collision.gameObject.name} 오브젝트와 충돌 중...");
     }
 
     /// <summary>
@@ -25,6 +25,6 @@ public class PlayerCollision : MonoBehaviour
     /// </summary>
     private void OnCollisionExit(Collision collision)
     {
-        Debug.Log($"{collision.gameObject.name} 오브젝트와 충돌 종료"); 
-    }
+        //Debug.Log($"{collision.gameObject.name} 오브젝트와 충돌 종료"); 
+    } 
 }

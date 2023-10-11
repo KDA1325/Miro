@@ -83,6 +83,6 @@ public class MovementCharacterController : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        Debug.Log($"{hit.gameObject.name} 오브젝트와 충돌");
+        //Debug.Log($"{hit.gameObject.name} 오브젝트와 충돌");
     }
 }
