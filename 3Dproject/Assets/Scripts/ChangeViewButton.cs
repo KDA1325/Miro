@@ -6,30 +6,33 @@ public class ChangeViewButton : MonoBehaviour
 {
     [SerializeField]
     private Camera MainCamera;
+    [SerializeField]
     private Camera TopViewCamera;
-    
-    public bool isTopView;
-    public bool isBackView;
+    [SerializeField]
+    private MovementCharacterController movementCharacterController;
 
-    public void ChangeTopView()
+    private void Start()
+    {
+        MainCamera.enabled = true;
+        TopViewCamera.enabled = false;
+        movementCharacterController.isTopView = false;
+    }
+
+public void ChangeTopView()
     {
         Debug.Log("Å¾ºä ÀüÈ¯");
 
-        isBackView = false;
-        isTopView = true;
-
         MainCamera.enabled = false;
         TopViewCamera.enabled = true;
+        movementCharacterController.isTopView = true;
     }
 
     public void ChangeBackView()
     {
         Debug.Log("¹éºä ÀüÈ¯");
         
-        isTopView = false;
-        isBackView = true;
-        
         TopViewCamera.enabled = false;
         MainCamera.enabled = true;
+        movementCharacterController.isTopView = false;
     }
 }
