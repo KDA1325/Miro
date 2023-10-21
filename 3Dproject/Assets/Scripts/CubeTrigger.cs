@@ -7,8 +7,6 @@ public class CubeTrigger : MonoBehaviour
 {
     [SerializeField]
     private MovementCharacterController movementCharacterController;
-    //[SerializeField]
-    //private Camera camera;
     float y;
 
     private void OnMouseDown()

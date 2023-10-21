@@ -22,8 +22,5 @@ public class MovementRigidbody : MonoBehaviour
 
         // 속력 = 이동 방향 * 이동 속도
         rigid.velocity = new Vector3(x, 0, z) * moveSpeed;
-
-        
     }
-
 }

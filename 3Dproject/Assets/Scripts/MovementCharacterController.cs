@@ -6,9 +6,7 @@ using UnityEngine;
 public class MovementCharacterController : MonoBehaviour
 {
     [SerializeField]
-    private float walkSpeed = 2.0f; // 걷기 속도
-    [SerializeField]
-    private float moveSpeed = 5.0f; // 이동 속도
+    private float moveSpeed = 10.0f; // 이동 속도
     private Vector3 moveDirection = Vector3.zero; // 이동 방향
     private Animator animator;
 
@@ -17,7 +15,6 @@ public class MovementCharacterController : MonoBehaviour
     private CharacterController characterController;
     
     public bool isTopView;
-    //public bool isBackView;
 
     private void Awake()
     {
@@ -38,10 +35,7 @@ public class MovementCharacterController : MonoBehaviour
             animator.SetFloat("horizontal", x * offset);
             animator.SetFloat("vertical", z * offset);
 
-            moveSpeed = walkSpeed;
-
             // 오브젝트의 이동 방향 설정
-            // moveDirection = new Vector3(x, moveDirection.y, z);
             Vector3 dir = backViewCamera.rotation * new Vector3(x, 0, z);
             moveDirection = new Vector3(dir.x, moveDirection.y, dir.z);
 
