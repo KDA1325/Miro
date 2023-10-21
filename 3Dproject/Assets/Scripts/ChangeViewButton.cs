@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class ChangeViewButton : MonoBehaviour
 {
-    public Camera MainCamera;
-    public Camera TopViewCamera;
+    [SerializeField]
+    private Camera MainCamera;
+    private Camera TopViewCamera;
+    
+    public bool isTopView;
+    public bool isBackView;
 
     public void ChangeTopView()
     {
         Debug.Log("Å¾ºä ÀüÈ¯");
+
+        isBackView = false;
+        isTopView = true;
+
         MainCamera.enabled = false;
         TopViewCamera.enabled = true;
     }
@@ -17,6 +25,10 @@ public class ChangeViewButton : MonoBehaviour
     public void ChangeBackView()
     {
         Debug.Log("¹éºä ÀüÈ¯");
+        
+        isTopView = false;
+        isBackView = true;
+        
         TopViewCamera.enabled = false;
         MainCamera.enabled = true;
     }
