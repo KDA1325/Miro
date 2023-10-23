@@ -18,7 +18,7 @@ public class ViewButtonController : MonoBehaviour
         movementCharacterController.isTopView = false;
     }
 
-public void ChangeTopView()
+    public void ChangeTopView()
     {
         Debug.Log("Å¾ºä ÀüÈ¯");
 
