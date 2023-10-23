@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeViewButton : MonoBehaviour
+public class ViewButtonController : MonoBehaviour
 {
     [SerializeField]
     private Camera MainCamera;
