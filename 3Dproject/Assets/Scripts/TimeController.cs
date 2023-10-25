@@ -35,7 +35,7 @@ public class TimeController : MonoBehaviour
         currentTime = Time.time - startTime;
 
         textTimer.text = $"{currentTime:N2}";
-        Debug.Log(currentTime);
+        //Debug.Log(currentTime);
 
         //if (currentTime < maxTime)
         //{
