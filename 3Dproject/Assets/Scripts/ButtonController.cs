@@ -10,14 +10,17 @@ public class ButtonController : MonoBehaviour
     private Camera TopViewCamera;
     [SerializeField]
     private MovementCharacterController movementCharacterController;
-    [SerializeField]
-    private GameObject[] cubes;
+    private CubeController cubeController;
+
+    //private GameObject[] cubes;
 
     private void Start()
     {
         MainCamera.enabled = true;
         TopViewCamera.enabled = false;
         movementCharacterController.isTopView = false;
+
+        //cubeController = GetComponent<CubeController>();
         //cubes = GameObject.FindGameObjectWithTag("Cube");
         //ResetTransform resetTransform = GetComponent<ResetTransform>();
     }
@@ -42,17 +45,21 @@ public class ButtonController : MonoBehaviour
 
     public void ResetPuzzel()
     {
-
-        foreach (GameObject cube in cubes)
-        {
-            ResetTransform resetTransform;
-            resetTransform = cube.GetComponent<ResetTransform>();
-        }
-
-        Debug.Log("퍼즐 리셋");
-        //resetTransform.Reset();
-        //Debug.Log("퍼즐 리셋");
-        //// 어케 불러올지 생각해보기
-        //resetTransform.Reset();
+        cubeController.Reset();
     }
+    //public void ResetPuzzel()
+    //{
+
+    //    foreach (GameObject cube in cubes)
+    //    {
+    //        CubeController cubeController;
+    //        cubeController = cube.GetComponent<ResetTransform>();
+    //    }
+
+    //    Debug.Log("퍼즐 리셋");
+    //    //resetTransform.Reset();
+    //    //Debug.Log("퍼즐 리셋");
+    //    //// 어케 불러올지 생각해보기
+    //    //resetTransform.Reset();
+    //}
 }

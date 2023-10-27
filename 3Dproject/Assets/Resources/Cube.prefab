@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3117071741498071283}
   - component: {fileID: 3273326578580816404}
   - component: {fileID: 3863104912717949149}
-  - component: {fileID: 241918743230086899}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -120,15 +119,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementCharacterController: {fileID: 0}
---- !u!114 &241918743230086899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2706278326305067712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b0da6a029eb2cc47bb921105b7a7808, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

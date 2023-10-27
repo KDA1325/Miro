@@ -1,21 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
+//using UnityEngine.SceneManagement;
 
-public class ResetTransform : MonoBehaviour
-{
-    private Vector3 resetPuzzelRotation;
+//public class ResetTransform : MonoBehaviour
+//{
+//    private Vector3 setPuzzelRotation;
 
-    private void Start()
-    {
-        resetPuzzelRotation = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
-    }
+//    private void Start()
+//    {
+//        setPuzzelRotation = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
+//    }
 
-    public void Reset()
-    {
-        transform.eulerAngles = resetPuzzelRotation;
-    }
+//    public void Reset()
+//    {
+//        transform.eulerAngles = setPuzzelRotation;
+//    }
 
     //public struct ResetPuzzel
     //{
@@ -49,4 +49,4 @@ public class ResetTransform : MonoBehaviour
     //    transform.eulerAngles = _trans.rotation;
     //    //transform.localScale = _trans.scale;
     //}
-}
+//}
