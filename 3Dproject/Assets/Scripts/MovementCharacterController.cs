@@ -11,6 +11,8 @@ public class MovementCharacterController : MonoBehaviour
     private Animator animator;
 
     [SerializeField]
+    private GameObject Info;
+    [SerializeField]
     private Transform backViewCamera;
     private CharacterController characterController;
     
@@ -20,6 +22,7 @@ public class MovementCharacterController : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
+        Info.SetActive(false);
     }
 
     private void Update()
@@ -62,5 +65,15 @@ public class MovementCharacterController : MonoBehaviour
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         //Debug.Log($"{hit.gameObject.name} 오브젝트와 충돌");
+        
+        // 트로피 조건 나중에 추가
+        if(hit.gameObject.name == "Chest")
+        {
+            Info.SetActive(true);
+        }
+        else
+        {
+            Info.SetActive(false);
+        }
     }
 }
