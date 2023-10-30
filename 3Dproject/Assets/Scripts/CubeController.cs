@@ -7,12 +7,11 @@ public class CubeController : MonoBehaviour
 {
     [SerializeField]
     private MovementCharacterController movementCharacterController;
-    private Vector3 setPuzzelRotation;
-    float x;
+    float y;
 
     private void Start()
     {
-        setPuzzelRotation = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
+
     }
 
     private void OnMouseDown()
@@ -29,15 +28,10 @@ public class CubeController : MonoBehaviour
                 if (!EventSystem.current.IsPointerOverGameObject())
                 {
                     Debug.Log(hit.transform.name);
-                    x += 90;
-                    hit.transform.gameObject.transform.localEulerAngles = new Vector3(x, 0, 0);
+                    y += 90;
+                    hit.transform.gameObject.transform.localEulerAngles = new Vector3(0, y, 0);
                 }
             }
         }
-    }
-
-    public void Reset()
-    {
-        transform.eulerAngles = setPuzzelRotation;
     }
 }
