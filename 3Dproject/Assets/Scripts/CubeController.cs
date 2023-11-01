@@ -7,11 +7,10 @@ public class CubeController : MonoBehaviour
 {
     [SerializeField]
     private MovementCharacterController movementCharacterController;
-    float y;
 
-    private void Start()
+    private void Awake()
     {
-
+        //Vector3 initRotation = transform.localEulerAngles;
     }
 
     private void OnMouseDown()
@@ -27,9 +26,10 @@ public class CubeController : MonoBehaviour
                 // UI를 클릭하지 않았을 경우에만 오브젝트 회전
                 if (!EventSystem.current.IsPointerOverGameObject())
                 {
-                    Debug.Log(hit.transform.name);
-                    y += 90;
-                    hit.transform.gameObject.transform.localEulerAngles = new Vector3(0, y, 0);
+                    Vector3 currentRotation = hit.transform.localEulerAngles;
+                    currentRotation.z += 90;
+
+                    hit.transform.localEulerAngles = currentRotation;
                 }
             }
         }
