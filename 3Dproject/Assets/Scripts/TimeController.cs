@@ -9,11 +9,13 @@ public class TimeController : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI textTimer; // 현재 시간 텍스트
+    private TextMeshProUGUI recordTimer; // 타이머 기록 텍스트
     private float startTime; // 타이머가 시작했을 때 플레이타임
     private float currentTime; // 타이머 현재 시간(Time.time - time_start)
     //private float maxTime = 5f; // 타이머 최종 시간
     private float recordTime;
-    private bool isEnded; // 타이머 종료 확인
+    public bool isEnded; // 타이머 종료 확인
+    public bool isEndTimer; // 타이머 종료 확인
 
     private void Awake()
     {
@@ -39,15 +41,10 @@ public class TimeController : MonoBehaviour
         textTimer.text = $"{currentTime:N2}";
         //Debug.Log(currentTime);
 
-        //if (currentTime < maxTime)
-        //{
-        //    textTimer.text = $"{currentTime:N2}";
-        //    Debug.Log(currentTime);
-        //}
-        //else if (!isEnded)
-        //{
-        //    EndTimer();
-        //}
+        if(isEnded)
+        {
+            EndTimer();
+        }
     }
 
     public void EndTimer() // 타이머 종료 시 실행
@@ -60,7 +57,7 @@ public class TimeController : MonoBehaviour
         //float minute = (recordTime % 3600) / 60;
         //float second = recordTime % 60;
 
-        textTimer.text = $"{recordTime:N2}";
+        recordTimer.text = $"{recordTime:N2}";
         isEnded = true;
     }
 

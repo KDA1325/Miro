@@ -121,7 +121,7 @@ public class MovementCharacterController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("Clear");
-                timeController.EndTimer();
+                timeController.isEnded = true;
                 sceneManager.EndGame();
             }
         }

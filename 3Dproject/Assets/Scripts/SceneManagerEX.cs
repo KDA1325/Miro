@@ -5,6 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagerEX : MonoBehaviour
 {
+    private GameObject EndingUI;
+    private GameObject IngameUI;
+
+    private void Awake()
+    {
+        EndingUI = GameObject.Find("Canvas").transform.GetChild(0).gameObject;
+        IngameUI = GameObject.Find("IngameUI");
+
+        EndingUI.SetActive(false);
+        IngameUI.SetActive(true);
+    }
+
     public void StartGame()
     {
         SceneManager.LoadScene(1);
@@ -21,8 +33,8 @@ public class SceneManagerEX : MonoBehaviour
 
     public void EndGame()
     {
-        GameObject Ending = GameObject.Find("Canvas").transform.GetChild(0).gameObject;
-        Ending.SetActive(true);
+        IngameUI.SetActive(false);
+        EndingUI.SetActive(true);
     }
 
     public void RetryGame()
