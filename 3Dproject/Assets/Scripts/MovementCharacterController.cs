@@ -5,7 +5,7 @@ public class MovementCharacterController : MonoBehaviour
 {
     [Header("Audio Clips")]
     [SerializeField]
-    private AudioClip audioClipWalk;
+    private AudioClip[] audioClipsWalk;
     [SerializeField]
     private AudioClip audioClipChest;
     [SerializeField]
@@ -35,6 +35,7 @@ public class MovementCharacterController : MonoBehaviour
     private AudioSource audioSource;
 
     public bool isTopView;
+    private bool isClear = false;
 
     private void Awake()
     {
@@ -49,7 +50,7 @@ public class MovementCharacterController : MonoBehaviour
 
     private void Update()
     {
-        if (isTopView == false)
+        if (isTopView == false && isClear == false)
         {
             float x = Input.GetAxisRaw("Horizontal");
             float z = Input.GetAxisRaw("Vertical");
@@ -65,6 +66,25 @@ public class MovementCharacterController : MonoBehaviour
             characterController.Move(moveDirection * moveSpeed * Time.deltaTime);
 
             transform.rotation = Quaternion.Euler(0, backViewCamera.eulerAngles.y, 0);
+
+            if (x != 0 || z != 0)
+            {
+                
+                if (audioSource.isPlaying == false)
+                {
+                    int index = Random.Range(0, audioClipsWalk.Length);
+                    audioSource.clip = audioClipsWalk[index];
+                    audioSource.loop = true;
+                    audioSource.Play();
+                }
+            }
+            else
+            {
+                if (audioSource.isPlaying == true)
+                {
+                    audioSource.Stop();
+                }
+            }
 
             if (ChestInfo.activeSelf == true || ChestInfo2.activeSelf == true || TrophyInfo.activeSelf == true)
             {
@@ -115,21 +135,23 @@ public class MovementCharacterController : MonoBehaviour
         }
     }
 
-  
+
     private void UpdateKeyCheck()
     {
-        if(ChestInfo.activeSelf == true || ChestInfo2.activeSelf == true)
+        if (ChestInfo.activeSelf == true || ChestInfo2.activeSelf == true)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
                 ChestChange();
             }
         }
-        else if(TrophyInfo.activeSelf == true)
+        else if (TrophyInfo.activeSelf == true)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                audioSource.PlayOneShot(audioClipTrophy);
                 timeController.GameClear();
+                isClear = true;
             }
         }
     }
@@ -141,7 +163,7 @@ public class MovementCharacterController : MonoBehaviour
             closeChest = chest.transform.GetChild(1).gameObject;
             openChest = chest.transform.GetChild(2).gameObject;
         }
-        else if(ChestInfo2.activeSelf == true)
+        else if (ChestInfo2.activeSelf == true)
         {
             chest = GameObject.Find("Chest2");
             closeChest = chest.transform.GetChild(1).gameObject;
@@ -150,14 +172,15 @@ public class MovementCharacterController : MonoBehaviour
 
         closeChest.SetActive(false);
         openChest.SetActive(true);
+        audioSource.PlayOneShot(audioClipChest);
 
         StartCoroutine(MoveInitPos());
     }
 
     private IEnumerator MoveInitPos()
     {
-        yield return new WaitForSeconds(0.5f); 
-        
+        yield return new WaitForSeconds(0.7f);
+
         characterController.enabled = false;
         transform.position = initialPosition;
         characterController.enabled = true;
