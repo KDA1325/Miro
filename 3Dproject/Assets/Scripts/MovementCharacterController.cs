@@ -19,9 +19,7 @@ public class MovementCharacterController : MonoBehaviour
     [SerializeField]
     private Transform backViewCamera;
     private CharacterController characterController;
-    //private SceneManagerEX sceneManager;
     private TimeController timeController;
-    private UIController uiController;
 
     public bool isTopView;
 
@@ -29,9 +27,7 @@ public class MovementCharacterController : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
-        //sceneManager = GetComponent<SceneManagerEX>(); 
         timeController = GameObject.FindObjectOfType<TimeController>();
-        uiController = GameObject.FindObjectOfType<UIController>();
 
         ChestInfo.SetActive(false);
         TrophyInfo.SetActive(false);
@@ -39,7 +35,6 @@ public class MovementCharacterController : MonoBehaviour
 
     private void Update()
     {
-        // BackView일 때
         if (isTopView == false)
         {
             float x = Input.GetAxisRaw("Horizontal");
@@ -62,7 +57,6 @@ public class MovementCharacterController : MonoBehaviour
                 UpdateKeyCheck();
             }
         }
-        // TopView일 때
         else
         {
             float x = Input.GetAxisRaw("Horizontal");
@@ -110,7 +104,6 @@ public class MovementCharacterController : MonoBehaviour
   
     private void UpdateKeyCheck()
     {
-        // 조건 분리하기
         if(ChestInfo.activeSelf == true || ChestInfo2.activeSelf == true)
         {
             if (Input.GetKeyDown(KeyCode.E))
