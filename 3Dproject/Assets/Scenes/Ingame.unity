@@ -948,7 +948,7 @@ MonoBehaviour:
   MainCamera: {fileID: 963194227}
   TopViewCamera: {fileID: 789634674}
   movementCharacterController: {fileID: 124459320}
-  puzzelResetController: {fileID: 0}
+  puzzelController: {fileID: 1124596649}
 --- !u!114 &409942434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1366,6 +1366,42 @@ PrefabInstance:
     - target: {fileID: 2793170764183796583, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_Name
       value: Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 2887753381603640129, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
+      propertyPath: m_Size.x
+      value: 2.778964
+      objectReference: {fileID: 0}
+    - target: {fileID: 2887753381603640129, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
+      propertyPath: m_Size.y
+      value: 2.8555138
+      objectReference: {fileID: 0}
+    - target: {fileID: 2887753381603640129, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
+      propertyPath: m_Center.x
+      value: 6.960838
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985405247693752999, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
+      propertyPath: m_Size.x
+      value: 1.6396395
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985405247693752999, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
+      propertyPath: m_Size.y
+      value: 2.5419562
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985405247693752999, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
+      propertyPath: m_Size.z
+      value: 2.087303
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985405247693752999, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
+      propertyPath: m_Center.x
+      value: 6.3839893
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985405247693752999, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
+      propertyPath: m_Center.y
+      value: -1.5145569
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985405247693752999, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
+      propertyPath: m_Center.z
+      value: -2.8043838
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2356,6 +2392,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChestInfo2
       objectReference: {fileID: 0}
+    - target: {fileID: 483187346625799268, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1175764288909840220, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2402,7 +2442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2793170764183796583, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_Name
-      value: Chest
+      value: Chest2
       objectReference: {fileID: 0}
     - target: {fileID: 2887753381603640129, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_Size.x
@@ -2419,6 +2459,30 @@ PrefabInstance:
     - target: {fileID: 2887753381603640129, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985405247693752999, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
+      propertyPath: m_Size.x
+      value: 1.5165377
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985405247693752999, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
+      propertyPath: m_Size.y
+      value: 2.6279843
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985405247693752999, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
+      propertyPath: m_Size.z
+      value: 2.206772
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985405247693752999, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
+      propertyPath: m_Center.x
+      value: 6.3451543
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985405247693752999, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
+      propertyPath: m_Center.y
+      value: -1.4715431
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985405247693752999, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
+      propertyPath: m_Center.z
+      value: -2.829922
       objectReference: {fileID: 0}
     - target: {fileID: 4985405247693752999, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_IsTrigger
@@ -3129,7 +3193,7 @@ MonoBehaviour:
   MainCamera: {fileID: 963194227}
   TopViewCamera: {fileID: 789634674}
   movementCharacterController: {fileID: 124459320}
-  puzzelResetController: {fileID: 0}
+  puzzelController: {fileID: 1124596649}
 --- !u!114 &1037579866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3624,6 +3688,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1124596648}
+  - component: {fileID: 1124596649}
   m_Layer: 0
   m_Name: Puzzel
   m_TagString: Untagged
@@ -3685,6 +3750,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1124596649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124596647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6271e09e806a1f44394098e0b8647f56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1150781933
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4619,7 +4696,7 @@ GameObject:
   - component: {fileID: 1410531528}
   - component: {fileID: 1410531527}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6575,7 +6652,7 @@ MonoBehaviour:
   MainCamera: {fileID: 963194227}
   TopViewCamera: {fileID: 789634674}
   movementCharacterController: {fileID: 124459320}
-  puzzelResetController: {fileID: 0}
+  puzzelController: {fileID: 1124596649}
 --- !u!114 &1977782992
 MonoBehaviour:
   m_ObjectHideFlags: 0

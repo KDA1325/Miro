@@ -3,15 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class CubeController : MonoBehaviour
+public class PuzzelClickManager : MonoBehaviour
 {
     [SerializeField]
     private MovementCharacterController movementCharacterController;
-
-    private void Awake()
-    {
-        //Vector3 initRotation = transform.localEulerAngles;
-    }
 
     private void OnMouseDown()
     {

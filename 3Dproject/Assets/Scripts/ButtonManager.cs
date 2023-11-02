@@ -11,15 +11,14 @@ public class ButtonManagerr : MonoBehaviour
     private Camera TopViewCamera;
     [SerializeField]
     private MovementCharacterController movementCharacterController;
-    [SerializeField]
-    private PuzzelResetController puzzelResetController;
+    private PuzzelController puzzelController;
 
     private void Start()
     {
         MainCamera.enabled = true;
         TopViewCamera.enabled = false;
         movementCharacterController.isTopView = false;
-        puzzelResetController = GetComponent<PuzzelResetController>();
+        puzzelController = GameObject.FindObjectOfType<PuzzelController>();
     }
 
     public void ChangeTopView()
@@ -40,8 +39,8 @@ public class ButtonManagerr : MonoBehaviour
         movementCharacterController.isTopView = false;
     }
 
-    //public void ResetPuzzel()
-    //{
-    //    puzzelResetController.ResetPuzzle();
-    //}
+    public void ResetPuzzel()
+    {
+        puzzelController.ResetPuzzle();
+    }
 }
