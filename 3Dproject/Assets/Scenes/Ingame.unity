@@ -461,11 +461,11 @@ RectTransform:
   m_Father: {fileID: 865373845}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 524}
-  m_SizeDelta: {x: 400, y: 90}
-  m_Pivot: {x: 0.5, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 550, y: 90}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &234474160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,8 +488,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 00.00.00
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 626190eb047ebba4f9a270ca0af8f452, type: 2}
-  m_sharedMaterial: {fileID: 5340536371320106857, guid: 626190eb047ebba4f9a270ca0af8f452, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 12c2f066786a6bf4d98b0b354f58e266, type: 2}
+  m_sharedMaterial: {fileID: 6640081773032204973, guid: 12c2f066786a6bf4d98b0b354f58e266, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -552,7 +552,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &234474161
@@ -948,7 +948,6 @@ MonoBehaviour:
   MainCamera: {fileID: 963194227}
   TopViewCamera: {fileID: 789634674}
   movementCharacterController: {fileID: 124459320}
-  puzzelController: {fileID: 1124596649}
 --- !u!114 &409942434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1325,7 +1324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1175764288909840220, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.85
+      value: 3.39
       objectReference: {fileID: 0}
     - target: {fileID: 1175764288909840220, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1333,23 +1332,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1175764288909840220, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.64
+      value: 5.22
       objectReference: {fileID: 0}
     - target: {fileID: 1175764288909840220, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70710677
+      value: 0.0069077383
       objectReference: {fileID: 0}
     - target: {fileID: 1175764288909840220, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -1.7763568e-15
+      value: -1.9115562e-15
       objectReference: {fileID: 0}
     - target: {fileID: 1175764288909840220, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0.99997616
       objectReference: {fileID: 0}
     - target: {fileID: 1175764288909840220, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 9.211489e-16
+      value: -5.9153303e-16
       objectReference: {fileID: 0}
     - target: {fileID: 1175764288909840220, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1357,7 +1356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1175764288909840220, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 179.208
       objectReference: {fileID: 0}
     - target: {fileID: 1175764288909840220, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1369,15 +1368,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2887753381603640129, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_Size.x
-      value: 2.778964
+      value: 3.654609
       objectReference: {fileID: 0}
     - target: {fileID: 2887753381603640129, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_Size.y
       value: 2.8555138
       objectReference: {fileID: 0}
     - target: {fileID: 2887753381603640129, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
+      propertyPath: m_Size.z
+      value: 3.5577896
+      objectReference: {fileID: 0}
+    - target: {fileID: 2887753381603640129, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_Center.x
-      value: 6.960838
+      value: 6.6418333
+      objectReference: {fileID: 0}
+    - target: {fileID: 2887753381603640129, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
+      propertyPath: m_Center.z
+      value: -2.7810264
       objectReference: {fileID: 0}
     - target: {fileID: 4985405247693752999, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_Size.x
@@ -2446,15 +2453,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2887753381603640129, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_Size.x
-      value: 2.4571927
+      value: 3.719174
       objectReference: {fileID: 0}
     - target: {fileID: 2887753381603640129, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_Size.y
       value: 2.8555138
       objectReference: {fileID: 0}
     - target: {fileID: 2887753381603640129, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
+      propertyPath: m_Size.z
+      value: 4.6981015
+      objectReference: {fileID: 0}
+    - target: {fileID: 2887753381603640129, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_Center.x
-      value: 6.845386
+      value: 6.6327147
+      objectReference: {fileID: 0}
+    - target: {fileID: 2887753381603640129, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
+      propertyPath: m_Center.z
+      value: -3.0209436
       objectReference: {fileID: 0}
     - target: {fileID: 2887753381603640129, guid: 853a192d32e47604792942d5c6521d9f, type: 3}
       propertyPath: m_IsTrigger
@@ -2529,7 +2544,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 260.8841, y: -699.962}
-  m_SizeDelta: {x: 400, y: 90}
+  m_SizeDelta: {x: 550, y: 90}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &916344583
 MonoBehaviour:
@@ -2553,8 +2568,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 00.00.00
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 626190eb047ebba4f9a270ca0af8f452, type: 2}
-  m_sharedMaterial: {fileID: 5340536371320106857, guid: 626190eb047ebba4f9a270ca0af8f452, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 12c2f066786a6bf4d98b0b354f58e266, type: 2}
+  m_sharedMaterial: {fileID: 6640081773032204973, guid: 12c2f066786a6bf4d98b0b354f58e266, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3193,7 +3208,6 @@ MonoBehaviour:
   MainCamera: {fileID: 963194227}
   TopViewCamera: {fileID: 789634674}
   movementCharacterController: {fileID: 124459320}
-  puzzelController: {fileID: 1124596649}
 --- !u!114 &1037579866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4820,8 +4834,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uBC31 \uBDF0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 626190eb047ebba4f9a270ca0af8f452, type: 2}
-  m_sharedMaterial: {fileID: 5340536371320106857, guid: 626190eb047ebba4f9a270ca0af8f452, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 12c2f066786a6bf4d98b0b354f58e266, type: 2}
+  m_sharedMaterial: {fileID: 6640081773032204973, guid: 12c2f066786a6bf4d98b0b354f58e266, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5307,8 +5321,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uD0D1 \uBDF0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 626190eb047ebba4f9a270ca0af8f452, type: 2}
-  m_sharedMaterial: {fileID: 5340536371320106857, guid: 626190eb047ebba4f9a270ca0af8f452, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 12c2f066786a6bf4d98b0b354f58e266, type: 2}
+  m_sharedMaterial: {fileID: 6640081773032204973, guid: 12c2f066786a6bf4d98b0b354f58e266, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6652,7 +6666,6 @@ MonoBehaviour:
   MainCamera: {fileID: 963194227}
   TopViewCamera: {fileID: 789634674}
   movementCharacterController: {fileID: 124459320}
-  puzzelController: {fileID: 1124596649}
 --- !u!114 &1977782992
 MonoBehaviour:
   m_ObjectHideFlags: 0

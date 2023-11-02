@@ -15,7 +15,11 @@ public class MovementCharacterController : MonoBehaviour
     private GameObject ChestInfo2;
     [SerializeField]
     private GameObject TrophyInfo;
-   
+
+    private GameObject chest;
+    private GameObject closeChest;
+    private GameObject openChest;
+
     [SerializeField]
     private Transform backViewCamera;
     private CharacterController characterController;
@@ -121,9 +125,18 @@ public class MovementCharacterController : MonoBehaviour
     }
     private void ChestChange()
     {
-        GameObject chest = GameObject.Find("Chest");
-        GameObject closeChest = chest.transform.GetChild(1).gameObject;
-        GameObject openChest = chest.transform.GetChild(2).gameObject;
+        if (ChestInfo.activeSelf == true)
+        {
+            chest = GameObject.Find("Chest");
+            closeChest = chest.transform.GetChild(1).gameObject;
+            openChest = chest.transform.GetChild(2).gameObject;
+        }
+        else if(ChestInfo2.activeSelf == true)
+        {
+            chest = GameObject.Find("Chest2");
+            closeChest = chest.transform.GetChild(1).gameObject;
+            openChest = chest.transform.GetChild(2).gameObject;
+        }
 
         closeChest.SetActive(false);
         openChest.SetActive(true);
