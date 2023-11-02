@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagerEX : MonoBehaviour
 {
+    private void Awake()
+    {
+        Screen.SetResolution(Screen.width, Screen.width * 16 / 9, true);
+    }
     public void StartGame()
     {
         SceneManager.LoadScene(1);

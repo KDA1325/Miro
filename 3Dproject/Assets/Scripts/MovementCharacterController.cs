@@ -37,6 +37,8 @@ public class MovementCharacterController : MonoBehaviour
     public bool isTopView;
     private bool isClear = false;
 
+    private float gravity = 9.8f;
+
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -52,6 +54,11 @@ public class MovementCharacterController : MonoBehaviour
     {
         if (isTopView == false && isClear == false)
         {
+            if (!characterController.isGrounded)
+            {
+                characterController.Move(Vector3.down * gravity * Time.deltaTime);
+            }
+
             float x = Input.GetAxisRaw("Horizontal");
             float z = Input.GetAxisRaw("Vertical");
 
@@ -69,7 +76,6 @@ public class MovementCharacterController : MonoBehaviour
 
             if (x != 0 || z != 0)
             {
-                
                 if (audioSource.isPlaying == false)
                 {
                     int index = Random.Range(0, audioClipsWalk.Length);
