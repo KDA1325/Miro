@@ -108,13 +108,19 @@ public class MovementCharacterController : MonoBehaviour
         if (other.gameObject.name == "Chest")
         {
             ChestInfo.SetActive(true);
+            ChestInfo2.SetActive(false);
+            TrophyInfo.SetActive(false);
         }
         else if (other.gameObject.name == "Chest2")
         {
+            ChestInfo.SetActive(false);
             ChestInfo2.SetActive(true);
+            TrophyInfo.SetActive(false);
         }
         else if (other.gameObject.name == "Trophy")
         {
+            ChestInfo.SetActive(false);
+            ChestInfo2.SetActive(false);
             TrophyInfo.SetActive(true);
         }
     }
@@ -135,7 +141,6 @@ public class MovementCharacterController : MonoBehaviour
         }
     }
 
-
     private void UpdateKeyCheck()
     {
         if (ChestInfo.activeSelf == true || ChestInfo2.activeSelf == true)
@@ -143,6 +148,8 @@ public class MovementCharacterController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 ChestChange();
+
+                audioSource.PlayOneShot(audioClipChest);
             }
         }
         else if (TrophyInfo.activeSelf == true)
@@ -172,7 +179,6 @@ public class MovementCharacterController : MonoBehaviour
 
         closeChest.SetActive(false);
         openChest.SetActive(true);
-        audioSource.PlayOneShot(audioClipChest);
 
         StartCoroutine(MoveInitPos());
     }
