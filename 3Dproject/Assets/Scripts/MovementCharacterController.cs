@@ -19,8 +19,9 @@ public class MovementCharacterController : MonoBehaviour
     [SerializeField]
     private Transform backViewCamera;
     private CharacterController characterController;
-    private SceneManagerEX sceneManager;
+    //private SceneManagerEX sceneManager;
     private TimeController timeController;
+    private UIController uiController;
 
     public bool isTopView;
 
@@ -28,8 +29,9 @@ public class MovementCharacterController : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
-        sceneManager = GetComponent<SceneManagerEX>(); 
+        //sceneManager = GetComponent<SceneManagerEX>(); 
         timeController = GameObject.FindObjectOfType<TimeController>();
+        uiController = GameObject.FindObjectOfType<UIController>();
 
         ChestInfo.SetActive(false);
         TrophyInfo.SetActive(false);
@@ -120,9 +122,7 @@ public class MovementCharacterController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("Clear");
-                timeController.isEnded = true;
-                sceneManager.EndGame();
+                timeController.GameClear();
             }
         }
     }
