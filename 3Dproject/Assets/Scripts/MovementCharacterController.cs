@@ -3,6 +3,14 @@ using UnityEngine;
 
 public class MovementCharacterController : MonoBehaviour
 {
+    [Header("Audio Clips")]
+    [SerializeField]
+    private AudioClip audioClipWalk;
+    [SerializeField]
+    private AudioClip audioClipChest;
+    [SerializeField]
+    private AudioClip audioClipTrophy;
+
     [SerializeField]
     private float moveSpeed = 10.0f; // 이동 속도
     private Vector3 moveDirection = Vector3.zero; // 이동 방향
@@ -24,6 +32,7 @@ public class MovementCharacterController : MonoBehaviour
     private Transform backViewCamera;
     private CharacterController characterController;
     private TimeController timeController;
+    private AudioSource audioSource;
 
     public bool isTopView;
 
@@ -32,6 +41,7 @@ public class MovementCharacterController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
         timeController = GameObject.FindObjectOfType<TimeController>();
+        audioSource = GetComponent<AudioSource>();
 
         ChestInfo.SetActive(false);
         TrophyInfo.SetActive(false);
