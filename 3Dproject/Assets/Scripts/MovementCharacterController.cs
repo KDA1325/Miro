@@ -28,8 +28,8 @@ public class MovementCharacterController : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
-        sceneManager = GetComponent<SceneManagerEX>();
-        timeController = GetComponent<TimeController>();
+        sceneManager = GetComponent<SceneManagerEX>(); 
+        timeController = GameObject.FindObjectOfType<TimeController>();
 
         ChestInfo.SetActive(false);
         TrophyInfo.SetActive(false);
